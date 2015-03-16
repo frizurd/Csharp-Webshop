@@ -1,0 +1,28 @@
+﻿@using webshop.Models
+@model Categorie
+
+@{
+    Layout = "~/Views/Shared/_BeheerLayout.cshtml";
+}
+
+<div class="content">
+    <div class="contentbar">
+        <div class="categorieTitel">
+            <h1> Categorie toevoegen </h1>
+        </div>
+    </div>
+    <div class="categorieToevoegen">   
+            <div class="gegevenslinks">
+                <form action="/beheerder/categorietoegevoegd" method="get">
+                    <p> 
+                        Naam:
+                        @Html.TextBoxFor(model => model.naam)
+                        @Html.ValidationMessageFor(model => model.naam)
+                    </p>
+                    <p>
+                        <input type="submit" value="Toevoegen" />
+                    </p>
+                </form>
+            </div>
+    </div>
+</div>

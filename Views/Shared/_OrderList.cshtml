@@ -1,0 +1,7 @@
+﻿@using webshop.Models
+@model List<String>
+           
+@for (int i = 0; i < Convert.ToInt16(Model.Count.ToString()); i++ )
+{
+ @Model[i].ToString();
+}

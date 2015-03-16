@@ -1,0 +1,29 @@
+﻿@using webshop.Models;
+@model List<Categorie>
+
+@{
+    ViewBag.Title = "Categorieën - INTOSPORT";
+    Layout = "~/Views/Shared/_BeheerLayout.cshtml";
+}
+
+    <h1>Nieuw categorie toevoegen</h1>
+    <a href="/beheerder/categorietoevoegen"><div class="button">Nieuw artikel</div></a>
+
+    <h1>Categorieën</h1>
+    <table class="tabel">
+
+	    <tr class="tabletitel">
+            <td>ID</td>
+		    <td>Categorie</td>
+		    <td>&nbsp;</td>
+	    </tr>
+
+        @{foreach (Categorie c in Model) {            
+        <tr>
+            <td>@c.ID</td>
+            <td>@c.naam</td>
+            <td><a href="/beheerder/categorieverwijderen/@c.ID">Verwijderen</a></td>
+	    </tr>
+        }}
+
+    </table>

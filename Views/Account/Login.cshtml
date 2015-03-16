@@ -1,0 +1,115 @@
+﻿@using webshop.Models
+@model Account
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="titel">
+    Login
+</div>
+<div class="floatleft">
+    <br>
+    Email:
+    <br>
+    <br>
+    Wachtwoord:
+    <br>
+    <br>
+    <br>
+</div>
+<div class="floatright">
+    <br>
+    <form id="input" method="post" action="/Account/Login">
+    <input type="text" name="username" />
+    <br />
+    <br />
+    <input type=password name="password" />
+    <br />
+    <br />
+    <input id="loginbutton" type="submit" value="Inloggen">
+    </form>
+</div>
+<br>
+<div id="registreer" class="titel">
+    Nog geen account? Registreer hier
+</div>
+<div class="floatleft">
+    <br>
+    *Voornaam:
+    <br>
+    <br>
+    *Achternaam:
+    <br>
+    <br>
+    Geboortedatum:
+    <br>
+    <br>
+    Straat:
+    <br>
+    <br>
+    Postcode:
+    <br>
+    <br>
+    Plaats:
+    <br>
+    <br>
+    Telefoonnummer:
+    <br>
+    <br>
+    *Email:
+    <br>
+    <br>
+    <br>
+    *Wachtwoord:
+    <br>
+    <br>
+    Nieuwsbrief?<br>
+    <br>
+    <br>
+    <br>
+</div>
+<div class="floatright">
+    <br>
+    <form action="/Register/Register" method="get">
+    <div class="Blok1Register">
+        @Html.TextBoxFor(model => model.voornaam)
+        @Html.ValidationMessageFor(model => model.voornaam)
+        <br>
+        <br>
+        @Html.TextBoxFor(model => model.achternaam)
+        @Html.ValidationMessageFor(model => model.achternaam)
+        <br>
+        <br>
+        <input type="text" class="textbox" autocomplete="off" name=gebdat>
+        <br>
+        <br>
+        <input type="text" class="textbox" autocomplete="off" name=straat>
+        <br>
+        <br>
+        <input type="text" class="textbox" autocomplete="off" name=postcode>
+        <br>
+        <br>
+        <input type="text" class="textbox" autocomplete="off" name=plaats>
+        <br>
+        <br>
+        <input type="text" class="textbox" autocomplete="off" name=telnr>
+        <br>
+        <br>
+        
+         @Html.TextBoxFor(model => model.email)
+         @Html.ValidationMessageFor(model => model.email)
+        <br>
+        <br>
+        <br>
+    </div>
+    <div class="Blok2Register">
+
+         @Html.PasswordFor(model => model.wachtwoord)
+         @Html.ValidationMessageFor(model => model.wachtwoord)
+        <br>
+        <br>
+        <input id="checkboxNieuwsbrief" type="checkbox" value="false" name=nieuwsbrief>Ja, graag
+    </div>
+    <input type="submit" value="Registreren">
+    </form>
+</div>
+

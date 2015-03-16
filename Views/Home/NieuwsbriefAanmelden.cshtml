@@ -1,0 +1,19 @@
+﻿@using webshop.Models;
+@model Niewsbrief
+
+@{
+    ViewBag.Title = "Aangemeld nieuwsbrief - INTOSPORT";
+    Layout = Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="content">
+	  <div class="contentbar">
+	  <div class="sorteerdiv">Aanmelden nieuwsbrief</div>
+	  </div>
+      <div class="contentfield">
+        <p>@Model.email is succesvol aangemeld voor de nieuwsbrief</p>
+        <p><strong><a href="/">« Ga terug naar de homepagina</a></strong></p>
+
+      </div>
+</div>

@@ -1,0 +1,105 @@
+﻿@using webshop.Models;
+@model Artikel
+           
+@{
+    ViewBag.Title = "Artikel toevoegen - INTOSPORT";
+    Layout = "~/Views/Shared/_BeheerLayout.cshtml";
+}
+
+
+<h1>Nieuw artikel toevoegen</h1>
+    <div class="newartikel">
+    <form name="input" action="/beheerder/artikeltoegevoegd" method="post">
+    <div class="leftform">
+        <p>Naam</p>
+        <p>@Html.TextBoxFor(model => model.naam)
+        @Html.ValidationMessageFor(model => model.naam)</p>
+        <p>Omschrijving</p>
+        <p>@Html.TextAreaFor(model => model.omschrijving)
+        @Html.ValidationMessageFor(model => model.omschrijving)</p>
+
+        <p>Merk</p>
+        <p><select name="merkID">
+        <option value="1">Vans</option>
+        <option value="2">Nike</option>
+        <option value="3">New Balance</option>
+        <option value="4">Adidas</option>
+        <option value="5">Asics</option>
+        <option value="6">Puma</option>
+        </select></p>
+
+        <p>Prijs</p>
+        <p>@Html.TextBoxFor(model => model.prijs)
+        @Html.ValidationMessageFor(model => model.prijs)</p>
+
+        <p>Plaatje (/images/product/category/product.jpg)</p>
+        <p>@Html.TextBoxFor(model => model.image)
+        @Html.ValidationMessageFor(model => model.image)</p>
+
+        </div>
+
+        <div class="leftform">
+        <p>Categorie</p>
+        <p><select name="categorie">
+        <option value="7">Accessoires</option>
+        <option value="1">Broeken</option>
+        <option value="2">Jassen</option>
+        <option value="3">Sneakers</option>
+        <option value="4">T-Shirts</option>
+        <option value="5">Overhemden</option>
+        <option value="6">Truien & vesten</option>
+        </select></p>
+
+        <p>Sport</p>
+        <p><select name="sport">
+        <option value="0">Geen</option>
+        <option value="1">Voetbal</option>
+        <option value="2">Basketbal</option>
+        <option value="3">Tennis</option>
+        <option value="4">Hockey</option>
+        <option value="5">Boksen</option>
+        <option value="6">Badminton</option>
+        </select></p>
+
+        <p>Aanbieding?</p>
+        <p><select name="aanbieding">
+        <option value="0">Nee</option>
+        <option value="1">Ja</option>
+        </select></p>
+
+        <p>Week aanbieding?</p>
+        <p><select name="wAanbieding">
+        <option value="0">Nee</option>
+        <option value="1">Ja</option>
+        </select></p>
+
+        <p>Artikel op voorpagina?</p>
+        <p><select name="voorPagina">
+        <option value="0">Nee</option>
+        <option value="1">Ja</option>
+        </select></p>
+
+        <p>Datum (mmddyyyy)</p>
+        <p>@Html.TextBoxFor(model => model.toevoegDatum)
+        @Html.ValidationMessageFor(model => model.toevoegDatum)</p>
+        
+        </div>
+
+        <div class="leftform">
+
+        <p>Geslacht:</p>
+        <p><select name="geslacht">
+        <option value="m">Man</option>
+        <option value="v">Vrouw</option>
+        </select></p>
+
+        <p>Maat:</p>
+        <p>@Html.TextBoxFor(model => model.grootte)
+        @Html.ValidationMessageFor(model => model.grootte)</p>
+
+        <input type="submit" value="Toevoegen" class="buttonsubmit">
+
+        </div>
+
+    </form>
+    </div>

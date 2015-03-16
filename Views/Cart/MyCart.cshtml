@@ -1,0 +1,32 @@
+﻿@using webshop.Models
+@model List<Artikel>
+@{
+    ViewBag.Title = "Produchtoverzicht - INTOSPORT";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+	  <div class="contentbar">
+	  <div class="sorteerdiv">Productoverzicht</div>
+	  </div>
+      <div class="contentfield">
+
+@foreach (var article in Model)
+{
+    <div class="cartitem">
+    <div class="cartimage"><image src="@article.image" width="60px"></div>
+    <div class="cartinfo"><h3><a href="/merken/alles/@article.merkID">@article.merkNaam</a></h3>
+    <a href=/Kleding/Artikel/@article.ID>@article.naam</a><br />
+    € @article.prijs
+    </div>
+    <div class="cartremove"><a href=/Cart/DeleteItem?articleNr=@article.ID><img src="/images/removeproduct.png" width="10px" /></a></div>
+    </div>
+}
+
+@if (Model.Count.ToString() != "0")
+{
+<form action=/Cart/FinalizeOrder method=post>
+<input type="submit" value="Afrekenen" class="buttonsubmit" />
+</form>
+}
+</div></div>

@@ -1,0 +1,12 @@
+﻿@using webshop.Models;
+@model Sport
+           
+@{
+    ViewBag.Title = "Sport is toegevoegd - INTOSPORT";
+    Layout = "~/Views/Shared/_BeheerLayout.cshtml";
+}
+
+    <div>
+        <p>@Model.naam is succesvol toegevoegd in de database.</p>
+        <p><strong><a href="/beheerder/sporten">« Ga terug</a></strong></p>
+    </div>

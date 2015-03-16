@@ -1,0 +1,21 @@
+﻿@if (Request.Cookies.Get("loginCookie").Values["email"] == "leeg")
+{
+   
+    <div class="account">Welkom bezoeker | <a href="/account/index">Inloggen</a>
+	<div class="register"><a href="/account">Registreren</a></div>
+	</div>
+    
+}
+else
+{
+    <div class="account">Welkom, @Request.Cookies.Get("loginCookie").Values["voornaam"].ToString() @Request.Cookies.Get("loginCookie").Values["achternaam"].ToString() | <a href=/account/myaccount >Mijn Account</a> 
+    
+    @if (Request.Cookies.Get("loginCookie").Values["privilege"] == "True")
+    {
+    <div class="register"><a href="/beheerder" >Beheerderspaneel</a></div>
+    }
+    
+    <div class="register"><a href="/account/deleteorders" >Uitloggen</a></div>
+    </div>
+    
+}

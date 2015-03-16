@@ -1,0 +1,36 @@
+﻿@using webshop.Models
+@{
+    ViewBag.Title = "Mijn account - INTOSPORT";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+    <div class="contentbar">
+        <div class="weekaanbiedingdiv">
+            Persoonsgegevens</div>
+    </div>
+    <div class="contentfield">
+        <div class="accountrow1">
+            Voornaam:<br />
+            Achternaam:<br />
+            Adres:<br />
+            Plaats:<br />
+            Postcode:<br /><br />
+            <strong>Order:</strong><br />
+            Order nummer:
+
+        </div>
+        <div class="accountrow2">
+            @Model.voornaam.ToString()<br />
+            @Model.achternaam.ToString()<br />
+            @if (@Model.straat != "nvt")
+            {@Model.straat.ToString()}<br />
+            @if (@Model.plaats != "nvt")
+            {@Model.plaats.ToString()}<br />
+            @if (@Model.postcode != "nvt")
+            {@Model.postcode.ToString()}<br /><br /><br />
+            @Html.Partial("_OrderList", ViewData["orderlist"])
+        </div>
+
+      
+    </div>
+</div>

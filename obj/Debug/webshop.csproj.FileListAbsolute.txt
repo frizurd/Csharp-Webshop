@@ -1,0 +1,30 @@
+c:\users\frizky\documents\visual studio 2010\Projects\webshop\webshop\bin\webshop.dll
+c:\users\frizky\documents\visual studio 2010\Projects\webshop\webshop\bin\webshop.pdb
+c:\users\frizky\documents\visual studio 2010\Projects\webshop\webshop\bin\EntityFramework.dll
+c:\users\frizky\documents\visual studio 2010\Projects\webshop\webshop\bin\MySql.Data.dll
+c:\users\frizky\documents\visual studio 2010\Projects\webshop\webshop\bin\EntityFramework.xml
+c:\users\frizky\documents\visual studio 2010\Projects\webshop\webshop\obj\Debug\webshop.dll
+c:\users\frizky\documents\visual studio 2010\Projects\webshop\webshop\obj\Debug\webshop.pdb
+C:\Users\Frizky\Documents\Visual Studio 2010\Projects\webshop\webshop\obj\Debug\webshop.csprojResolveAssemblyReference.cache
+C:\Users\jordy\Dropbox\ASP\webshop\webshop\bin\webshop.dll
+C:\Users\jordy\Dropbox\ASP\webshop\webshop\bin\webshop.pdb
+C:\Users\jordy\Dropbox\ASP\webshop\webshop\bin\EntityFramework.dll
+C:\Users\jordy\Dropbox\ASP\webshop\webshop\bin\EntityFramework.xml
+C:\Users\jordy\Dropbox\ASP\webshop\webshop\obj\Debug\webshop.csprojResolveAssemblyReference.cache
+C:\Users\jordy\Dropbox\ASP\webshop\webshop\obj\Debug\webshop.dll
+C:\Users\jordy\Dropbox\ASP\webshop\webshop\obj\Debug\webshop.pdb
+C:\Users\Frizky\Documents\Visual Studio 2010\Projects\webshoplast\webshop\bin\webshop.dll
+C:\Users\Frizky\Documents\Visual Studio 2010\Projects\webshoplast\webshop\bin\webshop.pdb
+C:\Users\Frizky\Documents\Visual Studio 2010\Projects\webshoplast\webshop\bin\EntityFramework.dll
+C:\Users\Frizky\Documents\Visual Studio 2010\Projects\webshoplast\webshop\bin\MySql.Data.dll
+C:\Users\Frizky\Documents\Visual Studio 2010\Projects\webshoplast\webshop\bin\EntityFramework.xml
+C:\Users\Frizky\Documents\Visual Studio 2010\Projects\webshoplast\webshop\obj\Debug\webshop.csprojResolveAssemblyReference.cache
+C:\Users\Frizky\Documents\Visual Studio 2010\Projects\webshoplast\webshop\obj\Debug\webshop.dll
+C:\Users\Frizky\Documents\Visual Studio 2010\Projects\webshoplast\webshop\obj\Debug\webshop.pdb
+C:\Users\jordy\Dropbox\ASP\webshoplast\webshop\bin\webshop.dll
+C:\Users\jordy\Dropbox\ASP\webshoplast\webshop\bin\webshop.pdb
+C:\Users\jordy\Dropbox\ASP\webshoplast\webshop\bin\EntityFramework.dll
+C:\Users\jordy\Dropbox\ASP\webshoplast\webshop\bin\EntityFramework.xml
+C:\Users\jordy\Dropbox\ASP\webshoplast\webshop\obj\Debug\webshop.csprojResolveAssemblyReference.cache
+C:\Users\jordy\Dropbox\ASP\webshoplast\webshop\obj\Debug\webshop.dll
+C:\Users\jordy\Dropbox\ASP\webshoplast\webshop\obj\Debug\webshop.pdb

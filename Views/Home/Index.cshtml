@@ -1,0 +1,65 @@
+﻿@using webshop.Models;
+@model List<Artikel>
+
+@{
+    ViewBag.Title = "INTOSPORT";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+	<div class="content">
+	  <div class="contentbar">
+	  <div class="weekaanbiedingdiv">Weekaanbiedingen</div>
+	  
+	  
+	  </div>
+	  <div class="alleproducten">
+
+        @{foreach (Artikel a in Model) {
+              String urllink;
+              if (@a.categorie == 7) {
+                  urllink = "accessoires";
+              }
+              else {
+                  urllink = "kleding";
+              }
+		<div class="product">
+			<a href="/@urllink/artikel/@a.ID">
+			<IMG SRC="@a.image" width="159px" alt="@a.merkNaam @a.naam" title="@a.merkNaam @a.naam"></a>
+			<div class="producttitel">
+            <strong>@a.merkNaam</strong><br>
+			        @a.naam<br>
+			<strong>EUR @a.prijs,- </strong>
+			</div>
+		</div>	
+        }}
+
+		</div>
+		
+		<div class="merkdivbar">		
+		
+			<div class="topmerkendiv">Top merken</div>
+			<div class="merkbar">
+                 <a href="/merken/alles/2">
+			     <IMG SRC="/images/merken/nike.png" alt="Nike" title="Nike"></a>
+			</div>
+			
+			<div class="merkbar">
+                 <a href="/merken/alles/4">
+			     <IMG SRC="/images/merken/adidas.png" alt="Adidas" title="Adidas"></a>
+			</div>
+			
+			<div class="merkbar">
+                 <a href="/merken/alles/6">
+			     <IMG SRC="/images/merken/puma.png" alt="Puma" title="Puma"></a>
+			</div>
+			
+			<div class="merkbar">
+                 <a href="/merken/alles/5">
+			     <IMG SRC="/images/merken/asics.png" alt="Asics" title="Asics"></a>
+			</div>
+			
+		</div>		
+		
+	</div>

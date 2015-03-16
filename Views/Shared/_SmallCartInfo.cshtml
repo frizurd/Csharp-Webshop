@@ -1,0 +1,12 @@
+﻿@if (Request.Cookies.Get("loginCookie").Values["email"] != "leeg")
+{
+    <div>
+        <a href=/Cart/Index>Aantal artikelen (@Request.Cookies.Get("cartCookie").Values["aantal"].ToString())</a>
+    </div>
+}
+else
+{
+    <div>
+    Er zijn geen producten in de winkelwagen
+    </div>
+}

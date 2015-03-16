@@ -1,0 +1,34 @@
+﻿@using webshop.Models;
+@model List<Artikel>
+
+@{
+    ViewBag.Title = "Nieuwe artikelen - INTOSPORT";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+	
+<div class="content">
+	  <div class="contentbar">
+	  <div class="sorteerdiv">Nieuwe artikelen</div>
+	  <div class="pagediv"></div>
+	  </div>
+
+        @{foreach (Artikel a in Model) {
+              String urllink;
+              if (@a.categorie == 7) {
+                  urllink = "accessoires";
+              }
+              else {
+                  urllink = "kleding";
+              }
+		<div class="product">
+			<a href="/@urllink/artikel/@a.ID">
+			<IMG SRC="@a.image" width="159px" alt="@a.merkNaam @a.naam" title="@a.merkNaam @a.naam"></a>
+			<div class="producttitel">
+            <strong>@a.merkNaam</strong><br>
+			        @a.naam<br>
+			<strong>EUR @a.prijs,- </strong>
+			</div>
+		</div>	
+        }}
+
+	</div>

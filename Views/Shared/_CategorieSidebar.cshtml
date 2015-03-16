@@ -1,0 +1,9 @@
+﻿@using webshop.Models;
+@model List<SidebarItem>
+
+	<span class="sidebartitel">Kleding</span>
+    <ul class="nav">
+        @{foreach (SidebarItem a in Model) {
+              <li><a href="/kleding/categorie/@a.ID">@a.naam</a></li>
+        }}
+    </ul>

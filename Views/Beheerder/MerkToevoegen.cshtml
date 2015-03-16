@@ -1,0 +1,34 @@
+﻿@using webshop.Models
+@model Merk
+
+@{
+    Layout = "~/Views/Shared/_BeheerLayout.cshtml";
+}
+
+<div class="content">
+    <div class="contentbar">
+        <div class="merkTitel">
+            <h1> Merk toevoegen </h1>
+        </div>
+    </div>
+    <div class="merkToevoegen">   
+            <div class="gegevenslinks">
+                <form action="/beheerder/merktoegevoegd" method="get">
+                    <p> 
+                        Naam:
+                        <br />
+                        @Html.TextBoxFor(model => model.naam)
+                        @Html.ValidationMessageFor(model => model.naam)
+                    </p>
+                    <p>
+                        Afbeelding&nbsp;locatie&nbsp;(bijv.&nbsp;/images/merken/nike.jpg):
+                        @Html.TextBoxFor(model => model.image)
+                        @Html.ValidationMessageFor(model => model.image)
+                    </p>
+                    <p>
+                        <input type="submit" value="Toevoegen" />
+                    </p>
+                </form>
+            </div>
+    </div>
+</div>

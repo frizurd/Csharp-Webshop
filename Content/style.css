@@ -1,0 +1,741 @@
+/* frizky css */
+
+@charset "utf-8";
+body {
+	font-size: 13px;
+	font-family: Arial, sans-serif;
+	background-color: #015291;
+	background-image:url('/images/bg.jpg');
+	background-repeat:repeat-x;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+ul, ol, dl { 
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { 
+	border: none;
+}
+
+a:link {
+	color: #42413C;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+.ad {
+	background-image:url('http://www.footlocker.eu/ns/promos/landing-pages/LandingPage_Banner_Puma-Suede-960x340.jpg');
+	background-position:center; 
+	background-repeat:no-repeat;
+	background-color: #181818;
+	width: 960px;
+	height: 340px;
+	margin: 0 auto;
+}
+
+.container {
+	width: 960px;
+	background-color: #FFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+
+.header {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.topbar {
+	overflow:hidden;
+}
+
+.logo {
+	float: left;
+	margin-top: 25px;
+	margin-bottom: 20px; 
+	width: 184px;
+	height: 40px;
+}
+
+.logo img:hover {
+
+	opacity: 0.6;
+
+}
+
+.account {
+	float:right;
+	margin-top: 25px;
+	font-size: 12px;
+	padding-right: 20px;
+	padding-top: 5px;
+	line-height: 10px;
+}
+
+.account a 
+{
+    color: #585858;
+}
+.register {
+	font-size: 12px;
+	text-align: right;
+	padding-top: 5px;
+}
+
+.winkelmand {
+	float: right;
+	font-size: 11px;
+	padding-left: 20px;
+	margin-top: 25px;
+	border-left: 1px solid #000;
+	width: 130px;
+}
+
+.winkeltop {
+	background: url('/images/cart.png') no-repeat;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 25px;
+	padding-bottom: 5px;
+}
+
+.menu {
+	background-color: #000;
+	margin-bottom: 15px;
+}
+
+.menu ul {
+	color: #FFF;
+	list-style-type:none;
+}
+.menu ul li {
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.menu ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+.menu ul li ul li { 
+  background: #000; 
+  display: block; 
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+}
+
+.menu ul li ul li:hover { background: #666; }
+.menu ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu li {
+	display:inline;
+	padding-right: 20px;
+}
+
+.menu a {
+	color: #FFF;
+	text-decoration:none;
+}
+
+.menu a:hover {
+	color: #EEE;
+}
+
+.zoekdiv {
+	float: right;
+    margin-top:-37px;
+	padding-right: 10px;
+}
+
+.zoekdiv input[type="text"]
+{
+    padding: 5px;
+    margin: 0px;
+    border: 0px;
+}
+
+.zoekdiv input[type="submit"]
+{
+    padding: 5px;
+    margin: 0px;
+    background-color: #facc2e;
+    color: #FFF;
+    border: 0px;
+    cursor: pointer; 
+    cursor: hand;
+}
+
+.zoekdiv input[type="submit"]:hover
+{
+    background-color: #ffbf00;
+    cursor: pointer; 
+    cursor: hand;
+}
+
+.sidebar1 {
+	float: left;
+	width: 155px;
+	background-color: #FFF;
+	padding: 10px;
+	margin-top: 3px;
+	margin-left: 5px;
+}
+.content {
+	padding: 10px 0;
+	width: 780px;
+	float: left;
+}
+
+.product{
+	 display:block;
+	 border:1px solid #dfdfdf;
+	 padding:5px;
+	 margin-left:20px;
+	 margin-bottom:15px;
+	 float:left;
+}
+
+.product:hover{
+	background-color: #EEE;
+}
+
+.grootproduct {
+	margin-left:20px;
+	float: left;
+	
+}
+.productinfobar{
+	float: right;
+	margin-right: 15px;
+	width: 350px;
+}
+
+.productinfomerk {
+	background-image: url("/images/productbg.png");
+	background-repeat: repeat-x;
+	height: 80px;
+}
+
+.productinfomerk .icon {
+	float: right;
+	padding-right: 10px;
+	overflow: hidden;
+	padding-top: 10px;
+}
+
+.productinfomerk  .text {
+	float: left;
+	padding: 20px;
+	
+}
+.productinfomerk  .text h1 {
+	padding: 0px;
+	margin: 0px;
+	
+}
+.productinfo {
+	background-image: url("/images/productbg.png");
+	background-repeat: repeat-x;
+	
+	font-size: 12px;
+	padding: 20px;
+}
+
+.productinfo select {
+	padding: 5px;
+	margin-top: 5px;
+	border: none;
+	width: 150px;
+}
+
+.productinfo p {
+	padding: 0px;
+	margin: 0px;
+}
+
+.productinfo h2, h3 {
+	padding: 0px;
+}
+
+.productinfo h2 {
+	font-size: 30px;
+}
+
+.productinfo ul {
+	margin-left: -20px;
+}
+
+.producttitel{
+	 font-size: 11px;
+	 margin-top: 5px;
+}
+
+.productprijs{
+	float: right;
+}
+
+.productmaat{
+	float: left;
+	margin-bottom: 25px;
+	padding-right: 30px;
+	border-right: 1px solid #eee;
+}
+
+.bestel {
+	background-color: #FACC2E;
+	padding: 8px 10px 9px 10px;
+	width: 120px;
+	margin-bottom: 20px;
+	margin-right: 2px;
+	color: #fff;
+	overflow:hidden;
+	float: left;
+}
+
+.bestel:hover{
+	background-color: #FFBF00;
+}
+
+.buttonsubmit {
+	background-color: #FACC2E;
+	padding: 15px;
+	color: #fff;
+    text-decoration: none;
+    border:0;
+}
+
+.buttonsubmit:hover{
+	background-color: #FFBF00;
+}
+
+.afrekenbutton {
+	background-color: #FACC2E;
+	padding: 10px;
+	color: #fff;
+    text-decoration: none;
+    border:0;
+    font-size: 11px;
+}
+
+.afrekenbutton:hover{
+	background-color: #FFBF00;
+}
+
+.contentbar {
+	overflow: hidden;
+	border-bottom: 1px solid #dfdfdf;
+	margin: 5px 15px 15px 20px;
+	padding-bottom: 10px;
+}
+
+.contentfield 
+{
+    margin: 5px 15px 15px 20px;
+}
+
+.sorteerdiv {
+	float: left;
+	text-transform:uppercase;
+	font-size: 11px;
+}
+
+.pagediv {
+	float: right; 
+}
+
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; 
+}
+ul.nav {
+	list-style: none; 
+	margin-bottom: 15px; 
+	margin-top: 10px;
+}
+
+ul.nav li {
+}
+
+ul.nav a, ul.nav a:visited { 
+	padding: 5px 5px 5px 15px;
+	display: block;
+	text-decoration: none;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { 
+	background-color: #eee;
+}
+
+ul.nav li.meer {
+	font-weight:bold;
+}
+
+.sidebartitel {
+	font-weight:bold;
+	font-size:13px;
+}
+
+.footer {
+	padding: 25px 0;
+	background-color: #e6e6e6;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	overflow: hidden;
+	}
+
+.fltrt {  
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { 
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { 
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+.cartitem 
+{
+    overflow: hidden;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    width: 300px;
+    border-bottom: 1px dashed #d0d0d0;
+}
+
+.cartimage 
+{
+    float: left;
+
+}
+
+.cartinfo 
+{
+    float: left;
+    margin: 10px;
+}
+
+.cartinfo h3
+{
+    font-size: 20px;
+    margin: 0px;
+}
+
+.cartremove 
+{
+    float: right;
+    margin: 12px;
+}
+
+.accountrow1 
+{   
+    line-height:200%;
+    float: left;
+    width: 100px;
+}
+
+.accountrow2
+{   
+    line-height:200%;
+    float: left;
+    width: 300px;
+}    
+
+.bestel-mijndetails 
+{
+    float: left;
+    width: 310px;
+}
+
+.bestel-betalenzending
+{
+    float: left;
+    width: 220px;
+    margin-left: 20px;
+}
+
+.betaalcredit
+{
+    mergin-left: 40px;
+}
+
+.bestel-betaal 
+{
+}
+
+.bestel-zending
+{
+    margin-bottom: 20px;
+}
+
+.betaalrow1 
+{
+    float: left;
+    margin-right: 20px;
+}
+
+betaalrow2
+{
+    float: right;
+}
+
+label.sublabel {
+margin-top: 0;
+color: #666;
+font-size: 9px;
+font-weight: normal;
+}
+
+label.sublabel2 {
+margin-top: 0;
+color: #666;
+font-size: 9px;
+font-weight: normal;
+padding-left: 5px;
+}
+.totaalprijs 
+{
+    line-height: 50px;
+}
+/* Patrick CSS */
+
+.weekaanbiedingdiv{
+ text-transform:uppercase;
+ font-size: 14px; 
+}
+
+.topmerkendiv{
+ text-transform:uppercase;
+ font-size: 14px; 
+ margin-bottom:15px;
+ margin-left: 20px;
+ padding-bottom: 10px;
+ border-bottom: 1px solid #dfdfdf;
+}
+
+.kopfooter{
+ font-weight:bold;
+ font-size:14px;
+ text-transform:uppercase;
+ margin-left:10px;
+ color: #4d4d4d;
+}
+
+ul.klantenserviceFoot{
+ font-size:12px;
+ margin-left:10px;
+ margin-bottom:8px;
+ list-style-type:none;
+}
+
+.merkdivbar{
+ margin-top: 10px;
+ margin-right: 20px;
+ overflow: hidden;
+}
+
+.alleproducten{
+ overflow:hidden;
+}
+
+.merkbar{
+ display:block;
+ border:1px solid #dfdfdf;
+ padding:14px;
+ margin-left:20px;
+ margin-bottom:15px;
+ float:left;
+}
+
+.merkbar:hover{
+ background-color: white;
+}
+
+.opties{
+ margin-top:5px;
+ margin-left:10px;
+ margin-bottom:5px;
+}
+
+.footerdiv{
+ float: left;
+ margin-left:15px;
+ margin-right: 15px;
+}
+
+.volgons{
+ margin-left:10px;
+}
+
+.newsletterdiv {
+
+ margin-left:8px;
+}
+
+/* Nicki */
+
+.floatleft{
+ float: left;
+ font-size: 17px;
+ padding-left: 5%;
+ background-color: #FFF;
+}
+.floatright{
+ float: right;
+ padding-right: 25%;
+ background-color: #FFF;
+}
+
+.floatright #username{
+ width:200px;
+}
+.floatright #password{
+ width:200px;
+}
+br {
+   display: block;
+   margin-top: 10px;
+   line-height: 15.6px;
+}
+#loginbutton{
+ margin-left: 140px;
+}
+
+.titel{
+ padding-top: 10px;
+ padding-bottom: 3px;
+ font-size: 20px;
+ border-bottom: 2px solid #eee;
+ color: black;
+ text-align: center;
+}
+.login{
+ background-color: #808080;
+ padding: 10px;
+ width: 180px;
+ margin-bottom: 20px;
+ margin-top: 100px;
+ margin-left: 660px;
+ color: white;
+ text-align: center;
+}
+.login:hover{
+ background-color: #b2b2b2;
+}
+.submit{
+ background-color: #808080;
+ padding: 10px;
+ width: 180px;
+ margin-bottom: 200px;
+ margin-top: 555px;
+ margin-left: 660px;
+ color: white;
+ text-align: center;
+}
+.submit:hover{
+ background-color: #b2b2b2;
+}
+
+#registreer{
+    margin-top: 150px;
+}
+
+.Blok1Register input{
+ width: 200px;
+ height: 18px;
+ margin-left: -20px;
+}
+
+.Blok2Register input{
+ width: 200px;
+ height: 18px;
+ margin-left: -20px;
+}
+
+#checkboxNieuwsbrief
+{
+ margin-bottom: 20px;
+ margin-left: -70px;
+ margin-right: -80px;
+}
+
+@-moz-document url-prefix() 
+{
+    .Blok1Register input
+    {
+    width: 200px;
+    height: 14.4px;
+    }
+    
+    .Blok2Register input
+    {
+    width: 200px;
+    height: 14.4px;
+    margin-top: 1px; 
+    margin-left: 0px; 
+    margin-right: -40px;
+    }
+}
+
+@-moz-document url-prefix()
+{
+    #registreer{
+     margin-top: 150px;
+    }
+    
+    #checkboxNieuwsbrief{
+     margin-left: -93px;
+     margin-right: -80px;
+    }
+    
+    #input{
+     margin-right: -1px;
+    }
+    
+    #loginbutton{
+     margin-left: 132px;
+    }
+}

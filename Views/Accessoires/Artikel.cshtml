@@ -1,0 +1,58 @@
+﻿@using webshop.Models;
+@model Artikel
+           
+@{
+    ViewBag.Title = @Model.merkNaam + " " + @Model.naam + " - INTOSPORT";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+	
+<div class="content">
+	  <div class="contentbar">
+	  <div class="sorteerdiv">Navigatie: <a href="/accessoires/">Accessoires</a> / <a href="/merk/alles/@Model.merkID">@Model.merkNaam</a> / <a href="/accessoires/sport/@Model.sport">@Model.sportnaam</a></div>
+	  <div class="pagediv"></div>
+	  </div>
+	
+	<div class="grootproduct">
+	<img src="@Model.image" width="360">
+	</div>
+	<div class="productinfobar">
+		<div class="productinfomerk">
+			<div class="text"><h1>@Model.merkNaam</h1>@Model.naam</div>
+			<div class="icon"><a href="/merken/alles/@Model.merkID" title="Alle artikelen van merk @Model.merkNaam"><img src="@Model.merkImage" width="100px"></a></div>
+		</div>
+		<div class="productinfo">
+
+		<div class="productmaat">
+		Maat: 
+		<p><select>
+		<option value="">One size</option>
+		</select></p>
+		</div>
+		<div class="productprijs">
+		Prijs:
+		<h2>€@Model.prijs,00</h2>
+		</div>
+		
+		<a href=/Cart/AddArticleToCart?artikelnr=@Model.ID&prijs=@Model.prijs><div class="bestel">Plaats in winkelmand
+		</div></a>
+
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+<a class="addthis_button_facebook"></a>
+<a class="addthis_button_twitter"></a>
+<a class="addthis_button_google_plusone_share"></a>
+</div>
+<script type="text/javascript">    var addthis_config = { "data_track_addressbar": true };</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f305ac33b728f16"></script>
+<!-- AddThis Button END -->
+
+		</div>
+		
+		<div class="productinfo">
+		<h3>Product omschrijving</h3>
+		<p>@Model.omschrijving</p>
+
+		</div>
+
+	</div>
+</div>

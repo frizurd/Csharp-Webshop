@@ -1,0 +1,12 @@
+﻿@using webshop.Models;
+@model Artikel
+           
+@{
+    ViewBag.Title = "Artikel is gewijzigd - INTOSPORT";
+    Layout = "~/Views/Shared/_BeheerLayout.cshtml";
+}
+
+    <div>
+        <p>@Model.naam is succesvol gewijzigd in het database.</p>
+        <p><strong><a href="/beheerder/artikelen">« Ga terug</a></strong></p>
+    </div>

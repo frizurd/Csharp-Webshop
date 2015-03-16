@@ -1,0 +1,23 @@
+﻿@using webshop.Models;
+@model List<Artikel>
+
+@{
+    ViewBag.Title = "Merken - INTOSPORT";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+	  <div class="contentbar">
+	  <div class="sorteerdiv">Onze merken</div>
+	  <div class="pagediv"></div>
+	  </div>
+
+      <div class="merkdivbar">
+      @{foreach (Artikel a in Model) {  
+				
+		<div class="merkbar">
+		    <a href="/merken/alles/@a.merkID" title="Alle @a.merkNaam artikelen"><IMG SRC="@a.merkImage" alt="@a.merkNaam" title="@a.merkNaam"></a>
+		</div>
+        
+      }}
+      </div>
+	</div>

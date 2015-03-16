@@ -1,0 +1,18 @@
+﻿@using webshop.Models;
+@model Sport
+           
+@{
+    ViewBag.Title = "Sporten toevoegen - INTOSPORT";
+    Layout = "~/Views/Shared/_BeheerLayout.cshtml";
+}
+
+
+<h1>Nieuwe Sport toevoegen</h1>
+    <div class="newSport">
+    <form name="input" action="/beheerder/SportToegevoegd/" method="post">
+        <p>Sportnaam</p>
+        <p>@Html.TextBoxFor(model => model.naam)
+        @Html.ValidationMessageFor(model => model.naam)</p>
+        <input type="submit" value="Toevoegen">
+    </form>
+    </div>

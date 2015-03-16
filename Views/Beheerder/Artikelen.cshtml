@@ -1,0 +1,32 @@
+﻿@using webshop.Models;
+@model List<Artikel>
+
+@{
+    ViewBag.Title = "Artikelen - INTOSPORT";
+    Layout = "~/Views/Shared/_BeheerLayout.cshtml";
+}
+
+    <h1>Nieuw artikel toevoegen</h1>
+    <a href="/beheerder/artikeltoevoegen"><div class="button">Nieuw artikel</div></a>
+
+    <h1>Artikelen</h1>
+    <table class="tabel">
+	    <tr class="tabletitel">
+		    <td>ID</td>
+		    <td>Naam</td>
+		    <td>Merk</td>
+		    <td>&nbsp;</td>
+		    <td>&nbsp;</td>
+	    </tr>
+
+        @{foreach (Artikel a in Model) {            
+        <tr>
+		    <td>@a.ID</td>
+		    <td>@a.naam</td>
+		    <td>@a.merkNaam</td>
+		    <td><a href="/beheerder/artikelwijzigen/@a.ID">Wijzig</a></td>
+		    <td><a href="/beheerder/artikelverwijderen/@a.ID">Verwijder</a></td>
+	    </tr>
+        }}
+
+    </table>

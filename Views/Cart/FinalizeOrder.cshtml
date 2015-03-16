@@ -1,0 +1,142 @@
+﻿@using webshop.Models
+@model OrderPrijs
+@{
+    ViewBag.Title = "Bestellen - INTOSPORT";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+	  <div class="contentbar">
+	  <div class="sorteerdiv">Bestellen</div>
+	  </div>
+      <div class="contentfield">
+
+      <div class="bestel-mijndetails">
+			<h3>Mijn details</h3>
+
+            <label>Emailadres <span><span>*</span></span></label><br>
+            <label class="sublabel">De bevestiging van de bestelling wordt verstuurd naar dit email adres</label>
+            <input type="text" size="45">
+
+            <label>Voornaam <span><span>*</span></span></label>
+            <input type="text" size="45">
+
+            <label>Achternaam <span><span>*</span></span></label>
+            <input type="text" size="45">
+
+            <label>Adres <span><span>*</span></span></label><br>
+            <label class="sublabel">Controleer of het juiste huisnummer en eventuele toevoeging juist is ingevuld</label>
+            <input type="text" size="45">
+
+            <label>Adres toevoeging</label>
+            <input type="text" size="45">
+
+            <table>
+	            <tbody><tr>
+		            <td>
+			            <label>Postcode <span>*</span></label>
+			            <input type="text" size="10" >
+		            </td>
+		            <td>
+			            <label >Stad <span>*</span></label>
+			            <input type="text" size="25">			
+		            </td>
+	            </tr>
+            </tbody></table>
+            <label>Land <span><span>*</span></span></label>
+            <select name="country">
+	            <option value="be">Belgie</option>
+	            <option value="nl" selected="selected">Nederland</option>
+            </select>
+
+            <label>Telefoonnummer</label>
+            <input type="text" size="45">
+
+            <label>Commentaar</label>
+            <textarea cols="35" rows="6"></textarea>
+
+			<br>
+
+			<input type="checkbox">			
+            <label>Stuur bestelling naar een ander adres</label>
+
+			<div style="display: none;">
+            <input type="checkbox">
+            <label>Vennootschap</label>
+
+            <label>Voornaam</label>
+            <input type="text" size="45">
+
+            <label>Achternaam</label>
+            <input type="text" size="45">
+
+            <label>Adres en huisnummer</label>
+            <input type="text" size="45">
+
+            <label>2e adres</label>
+            <input type="text" size="45">
+
+            <table>
+	            <tbody><tr>
+		            <td class="left">
+			            <label>Postcode</label>
+			            <input type="text" size="10">
+		            </td>
+		            <td>
+			            <label>Plaats</label>
+			            <input type="text" size="25">			
+		            </td>
+	            </tr>
+            </tbody></table>
+            <label>Land</label>
+            <select>
+	            <option value="be">Belgie</option>
+	            <option value="nl" selected="selected">Nederland</option>
+            </select>
+
+			</div>
+      </div>
+
+      <div class="bestel-betalenzending">
+
+      <div class="bestel-zending">
+      <h3>Selecteer zending</h3>
+      <form action="">
+        <input type="radio" name="zending" value="GSL">GLS Export (EUR 5,95)<br>
+        <input type="radio" name="zending" value="TNT">TNT (EUR 5,95)
+      </form>
+      </div>
+
+      <div class="bestel-betaal">
+      <h3>Selecteer betaalmethode</h3>
+      <form action="">
+        <input type="radio" name="betaal" value="creditcard">Credit card<br />
+        <input type="radio" name="betaal" value="ideal">IDEAL <img src="/images/ideal.gif" width="30px" /><br>
+        <input type="radio" name="betaal" value="overboeking">Overboeking
+      </form>
+      </div>
+
+      </div>
+
+      <div class="bestel-totaal">
+      <h3>Mijn artikelen</h3>
+
+      <div class="betaalrow1">
+      Artikelen<br />
+      Verzendkosten<br />
+      <span class="totaalprijs"><strong>TOTAALPRIJS</strong></span></div> 
+      
+      @{double getal = 5.95;
+        double totaalprijs = Model.prijs + getal;}
+
+      <div class="betaalrow2">
+      € @Model.prijs<br />
+      € 5,95<br />
+      <span class="totaalprijs"><strong>€ @totaalprijs</strong></span></div>
+      <form method=post action=/Cart/MakeOrder>
+      <input type="submit" value="Accepteer voorwaarden, Betalen" class="afrekenbutton" /><br />
+      <a href="/home/voorwaarden"><label class="sublabel2">Klik hier voor de voorwaarden.</label></a>
+      </form>
+      </div>
+
+</div></div>

@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Contact - INTOSPORT";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+	  <div class="contentbar">
+	  <div class="sorteerdiv">Contact INTOSPORT</div>
+	  </div>
+
+      <div class="contentfield">
+        <form  action="" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="action" value="submit"/> Naam:<br />
+        <input name="name" type="text" value="" size="30"/> <br /> Email:<br />
+        <input name="email" type="text" value="" size="30"/> <br /> Bericht:<br />
+        <textarea name="message" rows="7" cols="30"> </textarea> <br />
+        <input type="submit" value="Verzend email"/>
+        </form> 
+      </div>
+</div>

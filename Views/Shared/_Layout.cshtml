@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<title>@ViewBag.Title</title>
+	<link href="../../Content/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="header">
+	<div class="topbar">
+	
+    <div class="logo">
+	<a href="/"><img src="/images/logo.png" title="Terug naar INTOSPORT home" alt="INTOSPORT logo"></a> 
+	</div>
+    
+	<div class="winkelmand">
+	<div class="winkeltop">Winkelwagen</div>
+
+    @Html.Partial("_smallCartInfo")
+
+	</div>
+	
+    @Html.Partial("_smallAccountInfo")
+
+	</div>
+	
+	<div class="menu">
+	<ul>
+	<li><a href="/kleding/">Kleding</a>
+		<ul>
+			<li><a href="/kleding/mannen/">Mannen</a></li>
+			<li><a href="/kleding/vrouwen/">Vrouwen</a></li>
+		</ul>
+	</li>
+	<li><a href="/accessoires/">Accessoires</a></li>
+	<li><a href="/nieuw/">Nieuwe producten</a></li>
+	<li><a href="/merken/">Merken</a></li>
+	</ul>
+	
+	<div class="zoekdiv">
+	<form name="input" action="/zoeken/" method="get">
+	<input type="text" name="query" placeholder="Zoek">
+	<input type="submit" value="Zoeken">
+	</form>
+	</div>
+
+	</div>
+  </div>
+
+  
+  <div class="container">
+  <div class="ad"></div>
+
+    <div class="sidebar1">
+        @Html.Action("Categorie", "Sidebar")
+        @Html.Action("Sport", "Sidebar")
+        @Html.Action("Merk", "Sidebar")
+    </div>
+		@RenderBody()
+	
+  <div class="footer">
+	<div class="footerdiv">
+    <span class="kopfooter">KLANTENSERVICE</span>
+		<ul class="klantenserviceFoot">
+			<li><a href="/home/contact">Contact</a></li>
+			<li><a href="/home/levertijden">Levertijden</a></li>
+			<li><a href="/home/betalen">Betalen</a></li>
+			<li><a href="/home/retourneren">Retourneren</a></li>
+		</ul>
+	</div>
+	
+	<div class="footerdiv">
+    <span class="kopfooter">Over Intosport</span>
+		<ul class="klantenserviceFoot">
+			<li><a href="/home/winkel">Winkel</a></li>
+			<li><a href="/home/voorwaarden">Algemene voorwaarden</a></li>
+			<li><a href="/home/vacatures">Vacatures</a></li>
+            <li><a href="/home/sitemap">Sitemap</a></li>
+		</ul>
+	</div>
+	
+	<div class="footerdiv">
+    <span class="kopfooter">Betaalmethoden</span>
+		<div class="opties">
+		<IMG SRC="/images/paylogo.png">
+		</div>
+	</div>
+	
+	<div class="footerdiv">
+    <span class="kopfooter">Volg ons</span>
+		<div class="volgons">
+			<a href="http://www.facebook.com" target="_blank"><img src="/images/facebook.png"></a>
+			<a href="http://www.twitter.com" target="_blank"><img src="/images/twitter.png"></a>
+		</div>
+	</div>
+	
+	<div class="footerdiv">
+    <span class="kopfooter">Nieuwsbrief</span>
+			<div class="newsletterdiv">
+				<form name="input" action="/home/NieuwsbriefAanmelden" method="post">
+				<input type="text" name="nb">
+				<input type="submit" value="Inschrijven">
+				</form>
+			</div>	
+	</div>
+	
+  </div>
+  
+  
+</div>
+</body>
+</html>
